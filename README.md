@@ -1,3 +1,6 @@
+## Project Structure
+<pre>
+```
 ├── fixtures
 │   └── appium.ts
 ├── my-reports
@@ -11,10 +14,11 @@
 ├── test-results
 ├── tests
 │   ├── api
-│   ├── mobile
+│   └── mobile
 ├── tests-config
 └── utils
-
+```
+</pre>
 # Mobile & API Testing Project
 
 This project contains automated tests for mobile and API testing using WebdriverIO, Appium 2, and Playwright, written in TypeScript.

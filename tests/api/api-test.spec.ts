@@ -66,7 +66,7 @@ var headers = {
 test.describe("api", () => {
   test("Health check", async ({ request }) => {
     const response = await request.get(baseURL + healthCheck, {
-      headers
+      headers,
     });
     expect(response.status()).toBe(201);
     const text = await response.text();
@@ -207,14 +207,14 @@ test.describe("api", () => {
 });
 
 test.describe("api", () => {
-  test("Try to partially update boking with invalid id", async ({ request }) => {
+  test("Try to partially update boking with invalid id", async ({
+    request,
+  }) => {
     const invalidId = "99999999";
-    const response = await request.patch(
-      baseURL + apiBooking + invalidId,
-      {
-        headers,
-        data: JSON.stringify(dataToUpdatePartially),
-      });
+    const response = await request.patch(baseURL + apiBooking + invalidId, {
+      headers,
+      data: JSON.stringify(dataToUpdatePartially),
+    });
     expect(response.status()).toBe(405);
     const text = await response.text();
     console.log("Response body:", text);
@@ -225,12 +225,10 @@ test.describe("api", () => {
 test.describe("api", () => {
   test("Try to update boking with invalid id", async ({ request }) => {
     const invalidId = "99999999";
-    const response = await request.put(
-      baseURL + apiBooking + invalidId,
-      {
-        headers,
-        data: JSON.stringify(dataToUpdate),
-      });
+    const response = await request.put(baseURL + apiBooking + invalidId, {
+      headers,
+      data: JSON.stringify(dataToUpdate),
+    });
     expect(response.status()).toBe(405);
     const text = await response.text();
     console.log("Response body:", text);

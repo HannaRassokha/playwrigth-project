@@ -2,7 +2,7 @@ const { spawn } = require("child_process");
 const wd = require("wd");
 
 const appiumProcess = spawn("appium", ["--port", "4723"], {
-  stdio: "inherit", 
+  stdio: "inherit",
 });
 
 const waitForAppium = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -10,7 +10,7 @@ const waitForAppium = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 async function main() {
   try {
     console.log("Waiting for Appium to start...");
-    await waitForAppium(5000); 
+    await waitForAppium(5000);
 
     const driver = wd.promiseChainRemote("127.0.0.1", 4723);
 

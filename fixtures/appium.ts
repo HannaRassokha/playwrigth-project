@@ -10,7 +10,7 @@ export async function startAppium(): Promise<void> {
     setTimeout(() => {
       console.log("✅ Appium should be running");
       resolve();
-    }, 5000); 
+    }, 5000);
   });
 }
 

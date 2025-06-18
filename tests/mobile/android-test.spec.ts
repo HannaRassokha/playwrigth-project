@@ -28,3 +28,16 @@ test.describe("login", () => {
     expect(success).toBe(true);
   });
 });
+//TODO: Add more tests for the mobile app:
+// 1.	User Login Functionality
+// •	User should not be able to log in with invalid credentials.
+// 2.	Menu Navigation
+// •	User can navigate between Info, Scan, and Settings using the widget menu bar.
+// 3.	Scan Access Control
+// •	Scan functionality should only be available in employee mode.
+// 4.	Upload/Update Documents
+// •	User can upload or update their driver’s license and participant ID from the profile page.
+// 5.	Logout Functionality
+// •	User can successfully log out of the application.
+// 6.	Update Settings
+// •	User can access settings, update profile and participant details, and save the changes.

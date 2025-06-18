@@ -6,7 +6,7 @@ class LeafOrgApp {
       protocol: "http",
       hostname: "localhost",
       port: 4723,
-      path: "/", 
+      path: "/",
       capabilities: {
         platformName: "Android",
         "appium:platformVersion": "5.1",
